@@ -2,6 +2,12 @@ version: "3"
 
 services:
     
+    node-app2:
+        image: yolix/node-app:v1
+        ports:
+            - 3001:8080
+        networks: 
+            - node-app2
 
     node-app:
         image: yolix/node-app:v1
@@ -22,7 +28,7 @@ services:
 networks: 
     node-app:
         driver: bridge
-    bd:
+    node-app2:
         driver: bridge
 
         
